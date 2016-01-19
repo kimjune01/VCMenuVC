@@ -15,11 +15,17 @@ class ClearVC: UIViewController {
         
         let middleView = UIView(width: 100, height: 100)
         middleView.backgroundColor = UIColor.blueColor()
-        view.put(middleView, inside: view, onThe: .BottomLeft, withPadding: 10)
+        view.put(middleView,
+            inside: view,
+            onThe: .BottomLeft,
+            withPadding: 10)
         
         let someOtherView = UIView(width: 50, height: 50)
         someOtherView.backgroundColor = UIColor.greenColor()
-        view.put(someOtherView, atThe: .TopRight, of: middleView, withSpacing: 20)
+        view.put(someOtherView,
+            atThe: .TopRight,
+            of: middleView,
+            withSpacing: 20)
         
     }
     

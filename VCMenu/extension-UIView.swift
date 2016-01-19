@@ -202,12 +202,8 @@ extension UIView {
         layer.shadowRadius = 7
     }
     
-    func brandFont() -> UIFont {
-        return brandFont(.DemiBold, size: 16)
-    }
-
-    func brandFont(style: FontStyle, size:CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-" + style.rawValue, size: size)!
+    func brandFont(style: FontStyle? = .DemiBold, size:CGFloat? = 16) -> UIFont {
+        return UIFont(name: "AvenirNext-" + style!.rawValue, size: size!)!
     }
     
 }
