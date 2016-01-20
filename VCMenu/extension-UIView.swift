@@ -19,6 +19,7 @@ extension UIView {
         
         for eachSubview in subviews {
             eachSubview.backgroundColor = randomColor()
+            eachSubview.debugColors()
         }
     }
     
@@ -181,13 +182,18 @@ extension UIView { //relativeLayout
     
 }
 
+enum FontStyle: String {
+    case Regular = "Regular"
+    case DemiBold = "DemiBold"
+    case Medium = "Medium"
+}
+
+func brandFont(style: FontStyle? = .DemiBold, size:CGFloat? = 16) -> UIFont {
+    return UIFont(name: "AvenirNext-" + style!.rawValue, size: size!)!
+}
+
+
 extension UIView {
-    
-    enum FontStyle: String {
-        case Regular = "Regular"
-        case DemiBold = "DemiBold"
-        case Medium = "Medium"
-    }
     
     func animate(to theFrame: CGRect) {
         UIView.animateWithDuration(0.3) {
@@ -200,10 +206,6 @@ extension UIView {
         layer.shadowOffset = CGSizeZero
         layer.shadowOpacity = 1
         layer.shadowRadius = 7
-    }
-    
-    func brandFont(style: FontStyle? = .DemiBold, size:CGFloat? = 16) -> UIFont {
-        return UIFont(name: "AvenirNext-" + style!.rawValue, size: size!)!
     }
     
 }

@@ -9,13 +9,30 @@
 import UIKit
 
 class YellowVC: UIViewController {
+    
+    var realmText = RealmText()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.yellowColor()
 
+        let textField = UITextField(width: screenWidth, height: 44)
+        textField.delegate = self
+        textField.backgroundColor = UIColor.lightGrayColor()
+        textField.addTarget(self, action: "textFieldDidchange:", forControlEvents: .EditingChanged)
+        view.put(textField, inside: view, onThe: .Bottom, withPadding: 44)
         
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    func textFieldDidchange(textField: UITextField) {
+        print(textField.text)
+        save(textField.text!)
+    }
+    
+    func save(text:String) {
+        realmText.someText = text
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,3 +52,18 @@ class YellowVC: UIViewController {
     */
 
 }
+
+extension YellowVC: UITextFieldDelegate {
+    
+}
+
+
+
+
+
+
+
+
+
+
+

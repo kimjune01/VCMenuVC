@@ -21,11 +21,8 @@ class WhiteVC: UIViewController {
             withPadding: navBarHeight() + statusBarHeight)
         
         tower.rows = [
-            firstLabel(),
-            firstButton(),
-            firstLabel(),
-            firstLabel(),
-            firstLabel(),
+            WideButton(buttonText: "Bathroom", icon: UIImage(named: "bathroom")!),
+            WideButton(buttonText: "Bedroom", icon: UIImage(named: "bedroom")!),
             
         ]
         

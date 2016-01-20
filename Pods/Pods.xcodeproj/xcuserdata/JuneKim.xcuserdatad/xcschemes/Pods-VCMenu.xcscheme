@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E634F3BD66DCEA4A5924266D'
+               BlueprintIdentifier = '01503838C28B4E3E5A833324'
                BlueprintName = 'Pods-VCMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-VCMenu.a'>
+               BuildableName = 'Pods_VCMenu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

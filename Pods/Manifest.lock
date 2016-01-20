@@ -1,12 +1,18 @@
 PODS:
   - OAStackView (1.0.0)
+  - Realm (0.97.0):
+    - Realm/Headers (= 0.97.0)
+  - Realm/Headers (0.97.0)
+  - RealmSwift (0.97.0):
+    - Realm (= 0.97.0)
 
 DEPENDENCIES:
   - OAStackView
+  - RealmSwift
 
 SPEC CHECKSUMS:
   OAStackView: 05467abf2d30c2c55e87e81e003cd3940da8bc05
+  Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
+  RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
 
-PODFILE CHECKSUM: cfc348fe29360322e02243be48ae3cf78c3ee82f
-
-COCOAPODS: 1.0.0.beta.2
+COCOAPODS: 0.39.0

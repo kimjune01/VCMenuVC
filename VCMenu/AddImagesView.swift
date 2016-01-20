@@ -60,24 +60,12 @@ class AddImagesView: UIView {
     }
 
     func makePhotosButton() {
-        addPhotosButton = UIButton(width: frame.width, height: frame.height/2)
-        addPhotosButton.backgroundColor = UIColor.whiteColor()
+        
+        addPhotosButton = WideButton(buttonText: "Photos", icon: UIImage(named: "bedroom")!)
+        
         addPhotosButton.addTarget(self, action: "photosButtonTapped", forControlEvents: .TouchUpInside)
         addSubview(addPhotosButton)
         
-        let cameraIconView = UIImageView(image: UIImage(named: "addPhotosIcon"))
-        put(cameraIconView,
-            inside: addPhotosButton,
-            onThe: .Right,
-            withPadding: AddImagesView.margin)
-        
-        let photosLabel = UILabel()
-        photosLabel.text = "Photos"
-        photosLabel.textColor = UIColor.darkGrayColor()
-        put(photosLabel,
-            inside: addPhotosButton,
-            onThe: .Left,
-            withPadding: AddImagesView.margin)
     }
     func makeSeparator() {
         separator = UIView(width: frame.width, height: 1)
@@ -86,24 +74,10 @@ class AddImagesView: UIView {
         
     }
     func makeWebButton() {
-        addFromWebButton = UIButton(width: frame.width, height: frame.height/2)
-        addFromWebButton.backgroundColor = UIColor.whiteColor()
+        addFromWebButton = WideButton(buttonText: "From Web", icon: UIImage(named: "bathroom")!)
         addFromWebButton.addTarget(self, action: "webButtonTapped", forControlEvents: .TouchUpInside)
         put(addFromWebButton, atThe: .Bottom, of: separator, withSpacing: 0)
-        
-        let webIconView = UIImageView(image: UIImage(named: "addFromWebIcon"))
-        put(webIconView,
-            inside: addFromWebButton,
-            onThe: .Right,
-            withPadding: AddImagesView.margin)
-        
-        let webLabel = UILabel()
-        webLabel.text = "From Web"
-        webLabel.textColor = UIColor.darkGrayColor()
-        put(webLabel,
-            inside: addFromWebButton,
-            onThe: .Left,
-            withPadding: AddImagesView.margin)
+
     }
     
     

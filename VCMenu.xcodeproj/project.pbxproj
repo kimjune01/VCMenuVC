@@ -24,7 +24,9 @@
 		0E6A87DA1C4D94C800628351 /* TowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87D91C4D94C800628351 /* TowerView.swift */; };
 		0E6A87DC1C4DA40600628351 /* KabuniLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87DB1C4DA40600628351 /* KabuniLabel.swift */; };
 		0E6A87DE1C4DA77C00628351 /* KabuniTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87DD1C4DA77C00628351 /* KabuniTableCell.swift */; };
-		43A8D09A571357E39AB44B35 /* libPods-VCMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA105CD1DC2DFA84DBA9468 /* libPods-VCMenu.a */; };
+		0E6A87E11C4EEDCE00628351 /* RealmText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87E01C4EEDCE00628351 /* RealmText.swift */; };
+		0E6A87E31C4EFACE00628351 /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87E21C4EFACE00628351 /* WideButton.swift */; };
+		4A4F405AA80AFE19CE92B3EE /* Pods_VCMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB8CB9DAEC82D3F3F8CFA0E /* Pods_VCMenu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,9 +50,11 @@
 		0E6A87D91C4D94C800628351 /* TowerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerView.swift; sourceTree = "<group>"; };
 		0E6A87DB1C4DA40600628351 /* KabuniLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KabuniLabel.swift; sourceTree = "<group>"; };
 		0E6A87DD1C4DA77C00628351 /* KabuniTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KabuniTableCell.swift; sourceTree = "<group>"; };
+		0E6A87E01C4EEDCE00628351 /* RealmText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmText.swift; sourceTree = "<group>"; };
+		0E6A87E21C4EFACE00628351 /* WideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WideButton.swift; sourceTree = "<group>"; };
 		8BFAA22163E8C36BEF9C2524 /* Pods-VCMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCMenu/Pods-VCMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		8EB8CB9DAEC82D3F3F8CFA0E /* Pods_VCMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD0A33369F7D433CFECCA04 /* Pods-VCMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCMenu/Pods-VCMenu.release.xcconfig"; sourceTree = "<group>"; };
-		DDA105CD1DC2DFA84DBA9468 /* libPods-VCMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VCMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43A8D09A571357E39AB44B35 /* libPods-VCMenu.a in Frameworks */,
+				4A4F405AA80AFE19CE92B3EE /* Pods_VCMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +96,10 @@
 				0E12B4EF1C483071007EE113 /* VCMenuWrapperVC.swift */,
 				0E12B5011C4832A9007EE113 /* VCMenuVC.swift */,
 				0E6A87D91C4D94C800628351 /* TowerView.swift */,
+				0E6A87E21C4EFACE00628351 /* WideButton.swift */,
 				0E6A87DB1C4DA40600628351 /* KabuniLabel.swift */,
 				0E6A87DD1C4DA77C00628351 /* KabuniTableCell.swift */,
+				0E6A87DF1C4EED9A00628351 /* Realm */,
 				0E12B52A1C497E91007EE113 /* Menu */,
 				0E12B5281C497E88007EE113 /* AddImagesView.swift */,
 				0E12B4F41C483071007EE113 /* Assets.xcassets */,
@@ -117,10 +123,18 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		0E6A87DF1C4EED9A00628351 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				0E6A87E01C4EEDCE00628351 /* RealmText.swift */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
 		916025A155986BE6F22612BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DDA105CD1DC2DFA84DBA9468 /* libPods-VCMenu.a */,
+				8EB8CB9DAEC82D3F3F8CFA0E /* Pods_VCMenu.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,10 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6A87E11C4EEDCE00628351 /* RealmText.swift in Sources */,
 				0E12B52C1C49819D007EE113 /* extension-UIView.swift in Sources */,
 				0E12B5021C4832A9007EE113 /* VCMenuVC.swift in Sources */,
 				0E12B4F01C483071007EE113 /* VCMenuWrapperVC.swift in Sources */,
 				0E12B5271C497E5A007EE113 /* GrayVC.swift in Sources */,
+				0E6A87E31C4EFACE00628351 /* WideButton.swift in Sources */,
 				0E12B5251C497E1C007EE113 /* ClearVC.swift in Sources */,
 				0E6A87DA1C4D94C800628351 /* TowerView.swift in Sources */,
 				0E12B50A1C484876007EE113 /* RedVC.swift in Sources */,

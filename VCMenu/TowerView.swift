@@ -12,7 +12,7 @@ import UIKit
 class TowerView: UIView {
     
     static let defaultPadding:CGFloat = 20
-    static let defaultSpacing:CGFloat = 10
+    static let defaultSpacing:CGFloat = 0
     static let defaultSeparatorColor:UIColor = UIColor.lightGrayColor()
     
     var padding:CGFloat?
@@ -37,16 +37,17 @@ class TowerView: UIView {
             guard let bottomView = lastView else {
                 put(eachRow,
                     inside: self,
-                    onThe: .TopLeft,
+                    onThe: .Top,
                     withPadding: layoutPadding)
                 lastView = eachRow
                 continue
             }
-            let separator = separatorView()
+            let separator = separatorView(bottomView.width)
             put(separator, under: bottomView)
             put(eachRow, under: separator)
             lastView = eachRow
         }
+        addShadow()
     }
     
     func put(aView:UIView, under relativeView:UIView ) {
@@ -58,9 +59,9 @@ class TowerView: UIView {
         aView.reposition(toX: relativeView.minX, toY: aView.minY)
     }
     
-    func separatorView() -> UIView {
-        let layoutPadding = padding ?? TowerView.defaultPadding
-        let newSeparator = UIView(width: width - layoutPadding, height: 1)
+    func separatorView(width: CGFloat) -> UIView {
+//        let layoutPadding = padding ?? TowerView.defaultPadding
+        let newSeparator = UIView(width: width, height: 1)
         newSeparator.userInteractionEnabled = false
         newSeparator.backgroundColor = separatorColor ?? TowerView.defaultSeparatorColor
         return newSeparator
