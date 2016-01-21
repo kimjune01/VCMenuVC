@@ -19,7 +19,7 @@ class GreenVC: UIViewController {
         put(tower,
             inside: view,
             onThe: .Bottom,
-            withPadding: navBarHeight() + statusBarHeight)
+            withPadding: navigationBarHeight() + statusBarHeight)
         
         view.debugColors()
     }

@@ -26,6 +26,14 @@
 		0E6A87DE1C4DA77C00628351 /* KabuniTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87DD1C4DA77C00628351 /* KabuniTableCell.swift */; };
 		0E6A87E11C4EEDCE00628351 /* RealmText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87E01C4EEDCE00628351 /* RealmText.swift */; };
 		0E6A87E31C4EFACE00628351 /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87E21C4EFACE00628351 /* WideButton.swift */; };
+		0ED5C83B1C514AC600DF1E5D /* RBCollectionViewInfoFolderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C83A1C514AC600DF1E5D /* RBCollectionViewInfoFolderLayout.m */; };
+		0ED5C83D1C514AED00DF1E5D /* FoldoutCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C83C1C514AED00DF1E5D /* FoldoutCollectionVC.swift */; };
+		0ED5C83F1C5162C800DF1E5D /* FoldoutCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C83E1C5162C800DF1E5D /* FoldoutCollectionHeaderView.swift */; };
+		0ED5C8411C51630E00DF1E5D /* FoldoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C8401C51630E00DF1E5D /* FoldoutCollectionViewCell.swift */; };
+		0ED5C8431C51633800DF1E5D /* FoldoutCollectionFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C8421C51633800DF1E5D /* FoldoutCollectionFolderView.swift */; };
+		0ED5C8471C51695400DF1E5D /* FoldoutCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C8461C51695400DF1E5D /* FoldoutCollectionFooterView.swift */; };
+		0ED5C8491C516D5300DF1E5D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C8481C516D5300DF1E5D /* Product.swift */; };
+		0ED5C84B1C516D9C00DF1E5D /* Taxon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C84A1C516D9C00DF1E5D /* Taxon.swift */; };
 		4A4F405AA80AFE19CE92B3EE /* Pods_VCMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB8CB9DAEC82D3F3F8CFA0E /* Pods_VCMenu.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +60,15 @@
 		0E6A87DD1C4DA77C00628351 /* KabuniTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KabuniTableCell.swift; sourceTree = "<group>"; };
 		0E6A87E01C4EEDCE00628351 /* RealmText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmText.swift; sourceTree = "<group>"; };
 		0E6A87E21C4EFACE00628351 /* WideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WideButton.swift; sourceTree = "<group>"; };
+		0ED5C8391C514AC600DF1E5D /* RBCollectionViewInfoFolderLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCollectionViewInfoFolderLayout.h; sourceTree = "<group>"; };
+		0ED5C83A1C514AC600DF1E5D /* RBCollectionViewInfoFolderLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCollectionViewInfoFolderLayout.m; sourceTree = "<group>"; };
+		0ED5C83C1C514AED00DF1E5D /* FoldoutCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldoutCollectionVC.swift; sourceTree = "<group>"; };
+		0ED5C83E1C5162C800DF1E5D /* FoldoutCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldoutCollectionHeaderView.swift; sourceTree = "<group>"; };
+		0ED5C8401C51630E00DF1E5D /* FoldoutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldoutCollectionViewCell.swift; sourceTree = "<group>"; };
+		0ED5C8421C51633800DF1E5D /* FoldoutCollectionFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldoutCollectionFolderView.swift; sourceTree = "<group>"; };
+		0ED5C8461C51695400DF1E5D /* FoldoutCollectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldoutCollectionFooterView.swift; sourceTree = "<group>"; };
+		0ED5C8481C516D5300DF1E5D /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0ED5C84A1C516D9C00DF1E5D /* Taxon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxon.swift; sourceTree = "<group>"; };
 		8BFAA22163E8C36BEF9C2524 /* Pods-VCMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCMenu/Pods-VCMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		8EB8CB9DAEC82D3F3F8CFA0E /* Pods_VCMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD0A33369F7D433CFECCA04 /* Pods-VCMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCMenu/Pods-VCMenu.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +136,7 @@
 				0E12B5051C484863007EE113 /* YellowVC.swift */,
 				0E12B5071C48486F007EE113 /* GreenVC.swift */,
 				0E12B5091C484876007EE113 /* RedVC.swift */,
+				0ED5C8381C514AAE00DF1E5D /* FoldoutCollectionVC */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -129,6 +147,30 @@
 				0E6A87E01C4EEDCE00628351 /* RealmText.swift */,
 			);
 			name = Realm;
+			sourceTree = "<group>";
+		};
+		0ED5C8381C514AAE00DF1E5D /* FoldoutCollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				0ED5C83C1C514AED00DF1E5D /* FoldoutCollectionVC.swift */,
+				0ED5C83E1C5162C800DF1E5D /* FoldoutCollectionHeaderView.swift */,
+				0ED5C8401C51630E00DF1E5D /* FoldoutCollectionViewCell.swift */,
+				0ED5C8421C51633800DF1E5D /* FoldoutCollectionFolderView.swift */,
+				0ED5C8461C51695400DF1E5D /* FoldoutCollectionFooterView.swift */,
+				0ED5C8391C514AC600DF1E5D /* RBCollectionViewInfoFolderLayout.h */,
+				0ED5C83A1C514AC600DF1E5D /* RBCollectionViewInfoFolderLayout.m */,
+				0ED5C84C1C518CEE00DF1E5D /* Product */,
+				0ED5C84A1C516D9C00DF1E5D /* Taxon.swift */,
+			);
+			name = FoldoutCollectionVC;
+			sourceTree = "<group>";
+		};
+		0ED5C84C1C518CEE00DF1E5D /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				0ED5C8481C516D5300DF1E5D /* Product.swift */,
+			);
+			name = Product;
 			sourceTree = "<group>";
 		};
 		916025A155986BE6F22612BA /* Frameworks */ = {
@@ -271,8 +313,12 @@
 			files = (
 				0E6A87E11C4EEDCE00628351 /* RealmText.swift in Sources */,
 				0E12B52C1C49819D007EE113 /* extension-UIView.swift in Sources */,
+				0ED5C8431C51633800DF1E5D /* FoldoutCollectionFolderView.swift in Sources */,
 				0E12B5021C4832A9007EE113 /* VCMenuVC.swift in Sources */,
+				0ED5C8411C51630E00DF1E5D /* FoldoutCollectionViewCell.swift in Sources */,
+				0ED5C83F1C5162C800DF1E5D /* FoldoutCollectionHeaderView.swift in Sources */,
 				0E12B4F01C483071007EE113 /* VCMenuWrapperVC.swift in Sources */,
+				0ED5C8491C516D5300DF1E5D /* Product.swift in Sources */,
 				0E12B5271C497E5A007EE113 /* GrayVC.swift in Sources */,
 				0E6A87E31C4EFACE00628351 /* WideButton.swift in Sources */,
 				0E12B5251C497E1C007EE113 /* ClearVC.swift in Sources */,
@@ -280,11 +326,15 @@
 				0E12B50A1C484876007EE113 /* RedVC.swift in Sources */,
 				0E12B5061C484863007EE113 /* YellowVC.swift in Sources */,
 				0E12B4EE1C483071007EE113 /* AppDelegate.swift in Sources */,
+				0ED5C84B1C516D9C00DF1E5D /* Taxon.swift in Sources */,
 				0E12B5041C48482E007EE113 /* WhiteVC.swift in Sources */,
 				0E6A87DC1C4DA40600628351 /* KabuniLabel.swift in Sources */,
 				0E12B5001C48308D007EE113 /* extension-UIViewController.swift in Sources */,
+				0ED5C83D1C514AED00DF1E5D /* FoldoutCollectionVC.swift in Sources */,
 				0E12B5081C48486F007EE113 /* GreenVC.swift in Sources */,
 				0E6A87DE1C4DA77C00628351 /* KabuniTableCell.swift in Sources */,
+				0ED5C8471C51695400DF1E5D /* FoldoutCollectionFooterView.swift in Sources */,
+				0ED5C83B1C514AC600DF1E5D /* RBCollectionViewInfoFolderLayout.m in Sources */,
 				0E12B5291C497E88007EE113 /* AddImagesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = VCMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kabuni.VCMenu;
@@ -407,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = VCMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kabuni.VCMenu;

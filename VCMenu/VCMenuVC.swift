@@ -26,7 +26,8 @@ class VCMenuVC: UITableViewController {
             WhiteVC(),
             YellowVC(),
             GreenVC(),
-            RedVC()
+            RedVC(),
+            FoldoutCollectionVC(collectionViewLayout: RBCollectionViewInfoFolderLayout())
         ]
         
     }

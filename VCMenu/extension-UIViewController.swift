@@ -22,7 +22,7 @@ extension UIViewController {
     func name() -> String {
         return  NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last!
     }
-    func navBarHeight() -> CGFloat {
+    func navigationBarHeight() -> CGFloat {
         if let navController = navigationController {
             return navController.navigationBar.height
         } else {
@@ -35,4 +35,5 @@ extension UIViewController {
     func put(aView:UIView, atThe position:Position, of relativeView:UIView, withSpacing spacing:CGFloat) {
         view.put(aView, atThe: position, of: relativeView, withSpacing: spacing)
     }
+
 }

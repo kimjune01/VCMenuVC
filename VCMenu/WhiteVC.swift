@@ -18,7 +18,7 @@ class WhiteVC: UIViewController {
         view.put(tower,
             inside: view,
             onThe: .Top,
-            withPadding: navBarHeight() + statusBarHeight)
+            withPadding: navigationBarHeight() + statusBarHeight)
         
         tower.rows = [
             WideButton(buttonText: "Bathroom", icon: UIImage(named: "bathroom")!),

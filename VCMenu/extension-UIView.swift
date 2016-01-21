@@ -111,7 +111,9 @@ extension UIView { //relativeLayout
             
         }
         aSubview.frame = subRect
-        thisView.addSubview(aSubview)
+        if aSubview.superview != thisView{
+            thisView.addSubview(aSubview)
+        }
         (aSubview as? PutAware)?.wasPut()
     }
     
@@ -205,16 +207,20 @@ func delay(delay:Double, closure:()->()) {
         dispatch_get_main_queue(), closure)
 }
 
+func imageFromUrl(url:NSURL) -> UIImage {
+    let data = NSData(contentsOfURL : url)
+    return UIImage(data: data!)!
+}
+
 extension UIView {
     
     func animate(to theFrame: CGRect, completion: () -> () = {}) {
-        let duration = 0.3
-        UIView.animateWithDuration(duration) {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.frame = theFrame
+            }) { (finished:Bool) -> Void in
+                completion()
         }
-        delay(duration){
-            completion()
-        }
+        
     }
     
     func addShadow() {
@@ -222,6 +228,13 @@ extension UIView {
         layer.shadowOffset = CGSizeZero
         layer.shadowOpacity = 1
         layer.shadowRadius = 7
+    }
+    
+    func addThinShadow() {
+        layer.shadowColor = UIColor.blackColor().colorWithAlphaComponent(0.4).CGColor
+        layer.shadowOffset = CGSizeZero
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 1
     }
     
 }
