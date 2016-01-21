@@ -29,4 +29,10 @@ extension UIViewController {
             return 0
         }
     }
+    func put(aSubview:UIView, inside thisView:UIView, onThe position:Position, withPadding padding:CGFloat) {
+        view.put(aSubview, inside: thisView, onThe: position, withPadding: padding)
+    }
+    func put(aView:UIView, atThe position:Position, of relativeView:UIView, withSpacing spacing:CGFloat) {
+        view.put(aView, atThe: position, of: relativeView, withSpacing: spacing)
+    }
 }

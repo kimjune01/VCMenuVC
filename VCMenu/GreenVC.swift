@@ -1,73 +1,59 @@
-//
-//  GreenVC.swift
-//  VCMenu
-//
-//  Created by June Kim on 2016-01-14.
-//  Copyright © 2016 June Kim. All rights reserved.
-//
 
 import UIKit
 
 class GreenVC: UIViewController {
 
+    let tower = TowerView(
+        width: screenWidth * 0.85,
+        height: screenHeight * 0.7)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.greenColor()
-        let tower = TowerView(width: screenWidth * 0.85, height: screenHeight * 0.7)
-        view.put(tower,
+        view.backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.3)
+        
+        tower.position = .Bottom
+        tower.rows = [
+            addWideButton("Bathroom", imageName: "bathroom"),
+            addWideButton("Bedroom", imageName: "bedroom"),
+        ]
+        put(tower,
             inside: view,
-            onThe: .Top,
+            onThe: .Bottom,
             withPadding: navBarHeight() + statusBarHeight)
         
-        tower.rows = [
-            bathroomButton(),
-            bedroomButton(),
-            bathroomButton(),
-            bathroomButton(),
-            bedroomButton(),
-            bathroomButton(),
-            bathroomButton(),
-            bedroomButton(),
-            bathroomButton()
-        ]
-        
-        
+        view.debugColors()
     }
     
-    func bathroomButton() -> UIButton {
-        let button = WideButton(buttonText: "Bathroom", icon: UIImage(named: "bathroom"))
-        button.addTarget(self, action: "bathroomButtonTapped", forControlEvents: .TouchUpInside)
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        tower.show()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        tower.hide()
+    }
+    
+    func addWideButton(text:String, imageName:String) -> UIButton {
+        let button = WideButton(
+            buttonText: text,
+            icon: UIImage(named: imageName))
+        let selectorName = Selector(stringLiteral: text + "ButtonTapped")
+        button.addTarget(self,
+            action: selectorName,
+            forControlEvents: .TouchUpInside)
         return button
     }
     
-    func bedroomButton() -> UIButton {
-        let button = WideButton(buttonText: "Bedroom", icon: UIImage(named: "bedroom"))
-        button.addTarget(self, action: "bedroomButtonTapped", forControlEvents: .TouchUpInside)
-        return button
-    }
-    
-    func bathroomButtonTapped() {
+    func BathroomButtonTapped() {
         print("bathroomButtonTapped()")
+        tower.hide()
     }
 
-    func bedroomButtonTapped() {
+    func BedroomButtonTapped() {
         print("bedroomButtonTapped()")
+        tower.show()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

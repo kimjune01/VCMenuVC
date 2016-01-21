@@ -3,18 +3,16 @@
 import UIKit
 
 extension UIView {
-
     func debugColors() {
-        
         func randomColor() -> UIColor {
             func randomCGFloat() -> CGFloat {
                 return CGFloat(arc4random()) / CGFloat(UInt32.max)
             }
-            let r = randomCGFloat()
-            let g = randomCGFloat()
-            let b = randomCGFloat()
-            
-            return UIColor(red: r, green: g, blue: b, alpha: 1.0)
+            return UIColor(
+                red: randomCGFloat(),
+                green: randomCGFloat(),
+                blue: randomCGFloat(),
+                alpha: 0.7)
         }
         
         for eachSubview in subviews {
@@ -22,28 +20,29 @@ extension UIView {
             eachSubview.debugColors()
         }
     }
-    
-    
+}
+
+enum Position {
+    case Left
+    case Right
+    case Top
+    case Bottom
+    case TopLeft
+    case TopRight
+    case BottomLeft
+    case BottomRight
+}
+
+protocol PutAware {
+    func wasPut()
 }
 
 extension UIView { //relativeLayout
-    
-    enum Position {
-        case Left
-        case Right
-        case Top
-        case Bottom
-        case TopLeft
-        case TopRight
-        case BottomLeft
-        case BottomRight
-    }
     
     convenience init(width theWidth:CGFloat, height theHeight: CGFloat) {
         self.init()
         self.frame = CGRectMake(0, 0, theWidth, theHeight)
     }
-    
     
     func put(aSubview:UIView, inside thisView:UIView, onThe position:Position, withPadding padding:CGFloat) {
         assert(aSubview.width <= thisView.width &&
@@ -113,9 +112,10 @@ extension UIView { //relativeLayout
         }
         aSubview.frame = subRect
         thisView.addSubview(aSubview)
+        (aSubview as? PutAware)?.wasPut()
     }
     
-    func put (aView:UIView, atThe position:Position, of relativeView:UIView, withSpacing spacing:CGFloat) {
+    func put(aView:UIView, atThe position:Position, of relativeView:UIView, withSpacing spacing:CGFloat) {
         let diagonalSpacing:CGFloat = spacing / sqrt(2.0)
         switch position {
         case .Left:
@@ -155,18 +155,22 @@ extension UIView { //relativeLayout
         if let relativeSuperview =  relativeView.superview {
             relativeSuperview.addSubview(aView)
         }
+        (aView as? PutAware)?.wasPut()
     }
     
     func resize(toWidth width:CGFloat, toHeight height:CGFloat) {
         frame = CGRectMake(minX, minY, width, height)
+        (self as? PutAware)?.wasPut()
     }
     
     func reposition(toX newX:CGFloat, toY newY:CGFloat) {
         frame = CGRectMake(newX, newY, width, height)
+        (self as? PutAware)?.wasPut()
     }
     
     func shift(toRight deltaX:CGFloat, toBottom deltaY:CGFloat) {
         frame = CGRectMake(minX + deltaX, minY + deltaY, width, height)
+        (self as? PutAware)?.wasPut()
     }
 
     var width: CGFloat {  return CGRectGetWidth(frame)  }
@@ -192,12 +196,24 @@ func brandFont(style: FontStyle? = .DemiBold, size:CGFloat? = 16) -> UIFont {
     return UIFont(name: "AvenirNext-" + style!.rawValue, size: size!)!
 }
 
+func delay(delay:Double, closure:()->()) {
+    dispatch_after(
+        dispatch_time(
+            DISPATCH_TIME_NOW,
+            Int64(delay * Double(NSEC_PER_SEC))
+        ),
+        dispatch_get_main_queue(), closure)
+}
 
 extension UIView {
     
-    func animate(to theFrame: CGRect) {
-        UIView.animateWithDuration(0.3) {
+    func animate(to theFrame: CGRect, completion: () -> () = {}) {
+        let duration = 0.3
+        UIView.animateWithDuration(duration) {
             self.frame = theFrame
+        }
+        delay(duration){
+            completion()
         }
     }
     

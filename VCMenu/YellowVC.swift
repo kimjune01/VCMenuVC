@@ -32,7 +32,6 @@ class YellowVC: UIViewController {
     
     func save(text:String) {
         realmText.someText = text
-        
     }
 
     override func didReceiveMemoryWarning() {

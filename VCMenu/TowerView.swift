@@ -8,15 +8,18 @@
 
 import UIKit
 
-///sorta like stackview, but simpler and for ios 8+
-class TowerView: UIView {
+class TowerView: UIView, PutAware {
     
-    static let defaultPadding:CGFloat = 20
-    static let defaultSpacing:CGFloat = 0
+    enum TowerPosition {
+        case Top
+        case Bottom
+    }
+
+    var position: TowerPosition = .Top
     static let defaultSeparatorColor:UIColor = UIColor.lightGrayColor()
     
-    var padding:CGFloat?
-    var spacing:CGFloat?
+    var padding:CGFloat = 20
+    var spacing:CGFloat = 0
     var separatorColor:UIColor?
     var separatorShown = true {
         didSet{
@@ -24,21 +27,45 @@ class TowerView: UIView {
         }
     }
     
+    private var shownFrame:CGRect?
+    private var hiddenFrame:CGRect?
+    
+    ///configure variables before setting rows
     var rows:[UIView] = [UIView]() {
         didSet{
             towerLayout()
         }
     }
     
-    func towerLayout() {
+    
+    func show(toFrame:CGRect? = nil) {
+        if let parameterFrame = toFrame {
+            animate(to: parameterFrame)
+        } else if let localVariableFrame = shownFrame {
+            animate(to: localVariableFrame)
+        } else {
+            assert(false, "provide a frame or make sure the local variable is set!")
+        }
+    }
+    
+    func hide(toFrame:CGRect? = nil) {
+        if let parameterFrame = toFrame {
+            animate(to: parameterFrame)
+        } else if let localVariableFrame = hiddenFrame {
+            animate(to: localVariableFrame)
+        } else {
+            assert(false, "provide a frame or make sure the local variable is set!")
+        }
+    }
+    private func towerLayout() {
         var lastView: UIView?
-        let layoutPadding = padding ?? TowerView.defaultPadding
         for eachRow in rows {
             guard let bottomView = lastView else {
+                //first view does not have any separators.
                 put(eachRow,
                     inside: self,
                     onThe: .Top,
-                    withPadding: layoutPadding)
+                    withPadding: padding)
                 lastView = eachRow
                 continue
             }
@@ -47,24 +74,44 @@ class TowerView: UIView {
             put(eachRow, under: separator)
             lastView = eachRow
         }
+        if let finalView = lastView {
+            resize(toWidth: width, toHeight: finalView.maxY + padding)
+        }
         addShadow()
     }
+
+    private func configureAnimation() {
+        shownFrame = frame
+        switch position {
+        case .Top: //hidden frame is above the screen
+            let offsetY = -minY - height
+            if offsetY >= 0 { //HAX
+                return
+            }
+            hiddenFrame =  CGRectOffset(frame, 0, offsetY)
+        case .Bottom:
+            let offsetY = height + (screenHeight - maxY)
+            hiddenFrame =  CGRectOffset(frame, 0, offsetY)
+        }
+    }
     
-    func put(aView:UIView, under relativeView:UIView ) {
-        let layoutSpacing = spacing ?? TowerView.defaultSpacing
+    private func put(aView:UIView, under relativeView:UIView ) {
         put(aView,
             atThe: .Bottom,
             of: relativeView,
-            withSpacing: layoutSpacing/2)
+            withSpacing: spacing/2)
         aView.reposition(toX: relativeView.minX, toY: aView.minY)
     }
     
-    func separatorView(width: CGFloat) -> UIView {
-//        let layoutPadding = padding ?? TowerView.defaultPadding
+    private func separatorView(width: CGFloat) -> UIView {
         let newSeparator = UIView(width: width, height: 1)
         newSeparator.userInteractionEnabled = false
         newSeparator.backgroundColor = separatorColor ?? TowerView.defaultSeparatorColor
         return newSeparator
+    }
+    
+    func wasPut() {
+        configureAnimation()
     }
 
 }

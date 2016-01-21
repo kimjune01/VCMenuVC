@@ -21,6 +21,9 @@ class WideButton: UIButton {
     private var label:UILabel!
     private var icon:UIImageView!
     
+    private var unhighlightedColor = UIColor.grayColor()
+    private var highlightedColor = UIColor.redColor()
+    
     
     init(buttonText text: String, icon:UIImage?){
         self.buttonText = text
@@ -37,7 +40,6 @@ class WideButton: UIButton {
     }
     
     func setup() {
-        tintColor = UIColor.redColor()
         backgroundColor = UIColor.whiteColor()
         self.label = buttonLabel(self.buttonText)
         put(self.label,
@@ -62,6 +64,7 @@ class WideButton: UIButton {
         addTarget(self,
             action: "didTouchUpInside",
             forControlEvents: .TouchUpInside)
+        untint()
     }
     
     func didTouchDown() {
@@ -71,24 +74,31 @@ class WideButton: UIButton {
         untint()
     }
     func didTouchUpInside() {
-        tint()
+        untint()
     }
     
     func tint() {
-        
+        tintColor = highlightedColor
+        label.textColor = highlightedColor
     }
     
     func untint() {
-        
+        tintColor = unhighlightedColor
+        label.textColor = unhighlightedColor
     }
     
     func buttonLabel(text: String) -> UILabel {
         let label = UILabel()
         label.text = text
-        label.font = brandFont()
+        label.font = brandFont(FontStyle.Medium, size: 18)
         label.textColor = UIColor.darkGrayColor()
         label.sizeToFit()
         return label
+    }
+    
+    override func addTarget(target: AnyObject?, action: Selector, forControlEvents controlEvents: UIControlEvents) {
+        super.addTarget(target, action: action, forControlEvents: controlEvents)
+        assert(target!.respondsToSelector(action), "Target must respond to \(action.description)")
     }
     
     func buttonIconView(image: UIImage?) -> UIImageView {
