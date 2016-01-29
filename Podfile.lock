@@ -1,5 +1,5 @@
 PODS:
-  - OAStackView (1.0.0)
+  - OAStackView (1.0.1)
   - Realm (0.97.0):
     - Realm/Headers (= 0.97.0)
   - Realm/Headers (0.97.0)
@@ -11,7 +11,7 @@ DEPENDENCIES:
   - RealmSwift
 
 SPEC CHECKSUMS:
-  OAStackView: 05467abf2d30c2c55e87e81e003cd3940da8bc05
+  OAStackView: 95e7cb79cbea25c2342f496a44bdbe8bd4c8d510
   Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
   RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
 
