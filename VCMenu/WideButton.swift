@@ -43,13 +43,11 @@ class WideButton: UIButton {
         backgroundColor = UIColor.whiteColor()
         self.label = buttonLabel(self.buttonText)
         put(self.label,
-            inside: self,
-            onThe: .Left,
+            inside: self, onThe: .Left,
             withPadding: WideButton.padding)
         self.icon = buttonIconView(self.imageIcon)
         put(self.icon,
-            inside: self,
-            onThe: .Right,
+            inside: self, onThe: .Right,
             withPadding: WideButton.padding)
         self.icon.shift(
             toRight: self.icon.width/2 - WideButton.estimatedIconWidth/2,

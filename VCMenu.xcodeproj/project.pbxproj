@@ -20,7 +20,7 @@
 		0E12B5251C497E1C007EE113 /* ClearVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E12B5241C497E1C007EE113 /* ClearVC.swift */; };
 		0E12B5271C497E5A007EE113 /* GrayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E12B5261C497E5A007EE113 /* GrayVC.swift */; };
 		0E12B5291C497E88007EE113 /* AddImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E12B5281C497E88007EE113 /* AddImagesView.swift */; };
-		0E12B52C1C49819D007EE113 /* extension-UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E12B52B1C49819D007EE113 /* extension-UIView.swift */; };
+		0E12B52C1C49819D007EE113 /* put.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E12B52B1C49819D007EE113 /* put.swift */; };
 		0E6A87DA1C4D94C800628351 /* TowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87D91C4D94C800628351 /* TowerView.swift */; };
 		0E6A87DC1C4DA40600628351 /* KabuniLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87DB1C4DA40600628351 /* KabuniLabel.swift */; };
 		0E6A87DE1C4DA77C00628351 /* KabuniTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A87DD1C4DA77C00628351 /* KabuniTableCell.swift */; };
@@ -35,6 +35,7 @@
 		0ED5C8491C516D5300DF1E5D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C8481C516D5300DF1E5D /* Product.swift */; };
 		0ED5C84B1C516D9C00DF1E5D /* Taxon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C84A1C516D9C00DF1E5D /* Taxon.swift */; };
 		4A4F405AA80AFE19CE92B3EE /* Pods_VCMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB8CB9DAEC82D3F3F8CFA0E /* Pods_VCMenu.framework */; };
+		BD202FA71C681B2C00F372D0 /* CyanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD202FA61C681B2C00F372D0 /* CyanVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +54,7 @@
 		0E12B5241C497E1C007EE113 /* ClearVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearVC.swift; sourceTree = "<group>"; };
 		0E12B5261C497E5A007EE113 /* GrayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrayVC.swift; sourceTree = "<group>"; };
 		0E12B5281C497E88007EE113 /* AddImagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImagesView.swift; sourceTree = "<group>"; };
-		0E12B52B1C49819D007EE113 /* extension-UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "extension-UIView.swift"; sourceTree = "<group>"; };
+		0E12B52B1C49819D007EE113 /* put.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = put.swift; sourceTree = "<group>"; };
 		0E6A87D21C4D941B00628351 /* VCMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VCMenu-Bridging-Header.h"; sourceTree = "<group>"; };
 		0E6A87D91C4D94C800628351 /* TowerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerView.swift; sourceTree = "<group>"; };
 		0E6A87DB1C4DA40600628351 /* KabuniLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KabuniLabel.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		8BFAA22163E8C36BEF9C2524 /* Pods-VCMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCMenu/Pods-VCMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		8EB8CB9DAEC82D3F3F8CFA0E /* Pods_VCMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD0A33369F7D433CFECCA04 /* Pods-VCMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCMenu/Pods-VCMenu.release.xcconfig"; sourceTree = "<group>"; };
+		BD202FA61C681B2C00F372D0 /* CyanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyanVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +111,7 @@
 			children = (
 				0E12B4ED1C483071007EE113 /* AppDelegate.swift */,
 				0E12B4FF1C48308D007EE113 /* extension-UIViewController.swift */,
-				0E12B52B1C49819D007EE113 /* extension-UIView.swift */,
+				0E12B52B1C49819D007EE113 /* put.swift */,
 				0E12B4EF1C483071007EE113 /* VCMenuWrapperVC.swift */,
 				0E12B5011C4832A9007EE113 /* VCMenuVC.swift */,
 				0E6A87D91C4D94C800628351 /* TowerView.swift */,
@@ -136,6 +138,7 @@
 				0E12B5051C484863007EE113 /* YellowVC.swift */,
 				0E12B5071C48486F007EE113 /* GreenVC.swift */,
 				0E12B5091C484876007EE113 /* RedVC.swift */,
+				BD202FA61C681B2C00F372D0 /* CyanVC.swift */,
 				0ED5C8381C514AAE00DF1E5D /* FoldoutCollectionVC */,
 			);
 			name = Menu;
@@ -312,8 +315,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6A87E11C4EEDCE00628351 /* RealmText.swift in Sources */,
-				0E12B52C1C49819D007EE113 /* extension-UIView.swift in Sources */,
+				0E12B52C1C49819D007EE113 /* put.swift in Sources */,
 				0ED5C8431C51633800DF1E5D /* FoldoutCollectionFolderView.swift in Sources */,
+				BD202FA71C681B2C00F372D0 /* CyanVC.swift in Sources */,
 				0E12B5021C4832A9007EE113 /* VCMenuVC.swift in Sources */,
 				0ED5C8411C51630E00DF1E5D /* FoldoutCollectionViewCell.swift in Sources */,
 				0ED5C83F1C5162C800DF1E5D /* FoldoutCollectionHeaderView.swift in Sources */,

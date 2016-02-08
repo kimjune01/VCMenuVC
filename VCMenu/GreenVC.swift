@@ -9,7 +9,7 @@ class GreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.3)
+        //view.backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.3)
         
         tower.position = .Bottom
         tower.rows = [
@@ -21,7 +21,7 @@ class GreenVC: UIViewController {
             onThe: .Bottom,
             withPadding: navigationBarHeight() + statusBarHeight)
         
-        view.debugColors()
+        //view.debugColors()
     }
     
     override func viewDidAppear(animated: Bool) {
